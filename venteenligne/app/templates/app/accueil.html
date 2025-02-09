@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+ 
+{% block title %}
+home
+{% endblock title %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/css mobil responsive/responsive.css">
+    <link rel="stylesheet" href="css/Acceuil.css">
+   
+    {% load static %}
+   <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css'%}">
+   <link rel="stylesheet" href="{% static 'dist/css/index.css'%}">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------- fin menu ----------------------------------------------->
+    <main>
+        <!-- ------------------------------------ section N°1---------------------------- -->
+        <div class="photo"></div>
+
+        <div class="container">
+            <div class="CoqueDesingEtBgSilver">
+                <div class="coqueDesing">COQUE DESING</div>
+
+                <div class="bgSilver">
+                    <label>
+                            <p class="paraBgSilver">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Blanditiis ea ullam assumenda amet, molestiae 
+                                Ipsa pariatur ipsum corporis nobis odio adipisci 
+                                inventore ullam!
+                            </p>
+                        </label>
+                    <div class="rechercheChamps">
+                        <span>Rechercher</span>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- ------------------------------------ fin section N°1---------------------------- -->
+        <!-- ------------------------------------ section N°2---------------------------- -->
+        <!-- <div class="fond"> -->
+        <div class="container">
+            <!-- <div class="wrapper"> -->
+            
+            {% if p %}
+            <div class="row">
+                <div class="col-md-6 stockageProduit ">
+                    <img class="photoUn" src="{{p.picture.url}}"alt="">
+                </div>
+                <div class="col-md-6 descriptionProduit">
+                    <h5>DESCRIPTION</h5>
+
+            <form action="{% url 'ajoutProduitPanier' %}" method="POST">
+                        <input type="hidden" name="nomP" value="{{p.nom_prd}}">
+                        <input type="hidden" name="prix" value="{{p.prixUnit}}">
+                        <input type="hidden" name="desc" value="{{p.description}}">
+                    <input type="hidden" name="id_prd" value="{{p.id_produit}}">
+                    <h5 class="sonNom">{{p.nom_prd}}</h5>
+                    
+                    <label>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Ratione eius temporibus corrupti laudantium cumque sit rem harum vero provident quasi est,
+                            in perferendis? Error a facere nostrum architecto, voluptate sed.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus molestiae earum nulla aut facilis
+                            <br>
+                            <br>
+                            in perferendis? Error a facere nostrum architecto, voluptate sed.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus mole
+                            prix : <b>{{p.prixUnit}} ar</b>.Etat de produit est : <b>{{p.description}}</b>
+                        </p>
+                    </label>
+
+                </div>
+            </div>
+            {% else %}
+            Il n'y a pas des produits enregistrer
+            {% endif %}
+                
+            <div class="nombreEtchamps">
+                <div class="nombre">
+                    <h6>Nombre</h6>
+                </div>
+                <form class="champs">
+                    <input type="number" name="qtt">
+                </form>
+                
+                <input type="submit" value="Ajout au panier">
+            </form>
+
+            </div>
+            <!-- ------------------------------------ fin section N°1---------------------------- -->
+            <!-- ------------------------------------ section N°3---------------------------- -->
+            <div class="wrappe">
+                <div class=" blockDeux">
+
+                
+                    <div class="blockDeuxieme">
+                {% for prduit in produit %} 
+                        <a href="{% url 'afficher' id=prduit.pk %}">
+                            <div class=" blockDeuxieme1 nouveauParent">
+                                <div class="nouveau">
+                                    <p>{{prduit.description}}</p>
+                                </div>
+                                <div class="contenue">
+                                    <div class="image">
+                                        <img class="image" src="{{ prduit.picture.url }}" alt="image">
+                                    </div>
+                                    <div class="sorat">
+                                        <h3>Coque</h3>
+                                        <h5>{{prduit.nom_prd}}</h5>                                        
+                                    </div>
+                                    <div class="prix">
+                                        <p>{{prduit.prixUnit}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="nombrePage">
+                <a href="">
+                    <div class="nombres">
+                        1
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="nombres">
+                        2
+                    </div>
+                </a>
+                <a href="">
+                    <div class="nombres">
+                        3
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="sousNumeroPage2">
+            <i>IPSUM</i>
+            <i>IPSUM</i>
+            <i>IPSUM</i>
+            <i>IPSUM</i>
+            <i>IPSUM</i>
+        </div>
+
+        <!-- ------------------------------------ fin section N°3---------------------------- -->
+        <div class="container">
+            <hr>
+        </div>
+        <!-- ------------------------------------  pied de page---------------------------- -->
+        <div class=" piedPage1">
+            <div class="piedPage">
+                <div class="icone">
+                    <img class="logo" src="{% static 'dist/images/logo.png'%}" alt="image">
+                </div>
+                <p> siatis id molestiae sit! Ut, ipsum.
+                    <br>siatis id molestiae sit! Ut siatis
+                    <br> id molestiae sit! Ut
+                </p>
+            </div>
+            <div class="piedPage">
+                <div class="sousNumeroPage1">
+                    <h2>Description</h2>
+                    <div class="icone">
+                        <img src="" alt="image">
+                    </div>
+                    <i> siatis id molestiae si</i>
+                    <p> siatis id molestiae sit! Ut, ipsum.
+                        <br>siatis id molestiae sit! Ut siatis
+                        <br> id molestiae sit! Ut
+                    </p>
+                </div>
+            </div>
+            <div class="piedPage">
+                <div class="sousNumeroPage1">
+                    <h2>Information</h2>
+                    <div class="icone">
+                        <img src="" alt="image">
+                    </div>
+                    <i> siatis id molestiae sit! Ut, ipsum.</i>
+                    <p> siatis id molestiae sit! Ut, ipsum.
+                        <br>siatis id moles
+                        <br> id molestiae sit! Ut
+                    </p>
+                </div>
+            </div>
+            <div class="piedPage">
+                <div class="sousNumeroPage1">
+                    <h2>Thème</h2>
+                    <div class="icone">
+                        <img src="" alt="image">
+                    </div>
+                    <i> siatis id molestiae , ipsum.</i>
+                    <p> siatis id molestiae sit! Ut, ipsum.
+                        <br>siatis id
+                        <br> id molestiae sit! Ut
+                    </p>
+                </div>
+            </div>
+
+            <!-- ------------------------------------  fin pied de page---------------------------- -->
+    </main>
+{% endblock content %}
+

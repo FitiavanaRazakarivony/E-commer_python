@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css'%}">
+
+    <title>inscription</title>
+    <style>
+        .submit{
+            margin-top:10px;
+            display:flex;
+            justify-content:end;
+            margin-top:38px;
+        }
+        .inscripiion{
+            margin-top:4rem;
+            width: 31rem;
+        }
+       .inscription01{
+            background:;
+            border-radius: 1em;
+            box-shadow: #594d4f30 -2px 1px 8px 3px;            
+            width: 47rem;
+            margin: auto;
+            height: 25rem;
+       }
+       .image{
+            width:12rem;
+            margin: auto;
+            display:flex;
+            justify-content:center;    
+        }
+        .bar{
+            background: #ff5400;            
+            width: 100%;
+            height: 33px;
+            transform: skewX(40deg);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="inscription01">
+
+        <div class="container inscripiion"  >
+        <div class="logoForm"> 
+            <div class="logo"> 
+                <img class="image" src="{% static 'dist/images/logo.png'%}" alt="image">
+            </div>
+            <div class="form"> 
+            </div>
+        </div>
+            
+            <form action="{% url 'login' %}" method="POST" >
+                {% csrf_token %}
+                <input class="form-control form-control-lg" type="text" placeholder="Utilisateur" name="nomUt">
+                <input class="form-control form-control-lg" type="password" placeholder="password" name="password">
+          
+                <div class="submit  ">
+                    <input type="submit" class="btn btn-success" value="se Connecter">
+                </div>
+         
+                <div class="bar"></div>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
+        

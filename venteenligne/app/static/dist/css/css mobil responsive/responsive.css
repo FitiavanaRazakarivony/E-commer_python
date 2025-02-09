@@ -1,0 +1,111 @@
+                    @media screen and (max-width: 1196px) {
+                        .bgSilver {
+                            width: 100%;
+                        }
+                        .row {
+                            display: flex;
+                            flex-direction: row;
+                        }
+                        .photoUn {
+                            margin: auto;
+                            width: 285px;
+                            margin-top: -6px;
+                            margin-left: 100px;
+                        }
+                        .blockDeuxieme {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: repeat(3, 1fr);
+                            column-gap: 3vh;
+                            row-gap: 3vh;
+                            justify-content: center;
+                        }
+                        .fond {
+                            margin-top: 170px;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 982px) {
+                        .photoUn {
+                            margin: auto;
+                            margin-top: auto;
+                            margin-left: auto;
+                            width: 285px;
+                            margin-top: -6px;
+                            margin-left: 34px;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 790px) {
+                        .row {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .stockageProduit {
+                            margin-top: 10rem;
+                            width: auto;
+                        }
+                        .descriptionProduit {
+                            width: auto;
+                            height: auto;
+                            margin-left: 0px;
+                        }
+                        .photoUn {
+                            margin-left: 114px;
+                        }
+                        .blockDeuxieme {
+                            display: grid;
+                            grid-template-columns: repeat(1, 1fr);
+                            row-gap: 2vh;
+                            justify-content: center;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 974px) {
+                        .navbar {
+                            display: block;
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 1rem;
+                        }
+                        .stockageProduit {
+                            margin-top: 10rem;
+                            width: auto;
+                        }
+                        .photoUn {
+                            margin-left: 42px;
+                        }
+                        .row {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 988px) {
+                        .navbar {
+                            display: block;
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 1rem;
+                        }
+                        .stockageProduit {
+                            margin-top: 10rem;
+                            width: auto;
+                        }
+                        .photoUn {
+                            margin-left: 42px;
+                        }
+                        .row {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: row;
+                        }
+                        .descriptionProduit {
+                            width: auto;
+                            margin: auto;
+                        }
+                        
+                            
+                    }

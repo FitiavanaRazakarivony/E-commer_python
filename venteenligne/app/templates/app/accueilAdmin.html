@@ -1,0 +1,70 @@
+
+
+{% extends 'base.html' %}
+
+
+{% block title %}
+inscription
+{% endblock title %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css'%}">
+
+    <title>inscription</title>
+    <style>
+        .submit{
+            margin-top:10px;
+            display:flex;
+            justify-content:end;
+        }
+        .inscripiion{
+            height:50rem;
+            margin-top:4rem;
+        }
+       .inscription01{
+            background: silver;
+            border-radius: 1em;
+            box-shadow: #594d4f -2px 1px 8px 3px;
+            width: 47rem;
+            margin: auto;
+            height: 25rem;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="inscription01">
+
+        <div class="container inscripiion"  >
+            <form action="{% url 'trt_inscription' %}" method="POST" >
+                {% csrf_token %}
+                <input class="form-control form-control-lg" type="text" placeholder="nom" name="nom">
+                <input class="form-control form-control-lg" type="text" placeholder="prenom" name="prenom">
+                <input class="form-control form-control-lg" type="text" placeholder="adress" name="adress">
+                <input class="form-control form-control-lg" type="text" placeholder="ville" name="ville">
+                <input class="form-control form-control-lg" type="text" placeholder="email" name="email">
+                <input class="form-control form-control-lg" type="text" placeholder="tel" name="tel">
+        <div class="submit  ">
+            <input type="submit" class="btn btn-success" value="Valider">
+            <a href="{% url 'listeclient' %}">liste client</a>
+            <a href="{% url 'insertionProduit' %}">ajout Produit</a>
+        </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
+    
+{% endblock content %}
+    

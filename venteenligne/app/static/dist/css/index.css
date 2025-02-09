@@ -1,0 +1,359 @@
+    @font-face {
+        font-family: CURLZ___;
+        src: url(../fonts/CURLZ___.TTF);
+    }
+    
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .photo {
+        display: flex;
+        height: 675px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(../images/img1.jpg);
+        background-size: cover;
+        /* position: absolute; */
+    }
+    
+    .rechercheChamps {
+        display: flex;
+        position: row;
+        column-gap: 20px;
+    }
+    
+    .bgSilver {
+        width: 360px;
+        margin: auto;
+        background: silver;
+        border-radius: 1em;
+        box-shadow: #594d4f -2px 1px 8px 3px;
+    }
+    
+    .rechercheChamps {
+        display: flex;
+        justify-content: end;
+        padding-right: 10px;
+        padding-bottom: 14px;
+    }
+    
+    .coqueDesing {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 17px;
+        font-size: 40px;
+        color: whitesmoke;
+        font-family: CURLZ___;
+    }
+    
+    .paraBgSilver {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    
+    .CoqueDesingEtBgSilver {
+        /* position: relative; */
+        margin-top: -429px;
+        display: grid;
+        place-content: end;
+    }
+    /* ---------------------------- section N°2 ------------------- */
+    
+    .fond {
+        margin-top: 118px;
+        background: rgb(247, 247, 247);
+        box-shadow: #594d4f -1px 1px 8px 0px;
+        width: 1000px;
+        margin: auto;
+        margin-top: 122px;
+    }
+    
+    .stockageProduit {
+        background: white;
+        box-shadow: #594d4f -1px 1px 8px 0px;
+        width: 200px;
+        padding-top: 50px;
+        height: 500px;
+        margin-top: 13px;
+        border-radius: 10px;
+    }
+    
+    .photoUn {
+        width: 285px;
+        margin-top: -6px;
+        margin-left: 100px;
+    }
+    
+    .descriptionProduit {
+        background: white;
+        box-shadow: #594d4f -1px 1px 8px 0px;
+        width: 200px;
+        padding-top: 50px;
+        height: 500px;
+        margin-left: -13px;
+        margin-top: 13px;
+        border-radius: 10px;
+    }
+    
+    .sonNom {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .block {
+        display: flex;
+        justify-content: end;
+        margin-top: 191px;
+        margin-top: -23px;
+    }
+    
+    .premierBlock {
+        background: red;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .deuxiemeBlock {
+        background: rgb(5, 204, 5);
+        width: 50px;
+        height: 50px;
+    }
+    
+    .troisBlock {
+        background: rgb(0, 22, 191);
+        width: 50px;
+        height: 50px;
+    }
+    
+    .nombreEtchamps {
+        display: flex;
+        justify-content: end;
+        margin-top: 20px;
+        align-items: 10px;
+        column-gap: 1rem;
+    }
+    
+    .champs {
+        display: flex;
+    }
+    
+    .champs input {
+        width: 4rem;
+    }
+    /* ---------------------------- fin section N°2 ------------------- */
+    /* ------------------------------------ section N°3---------------------------- */
+    
+    .blockDeuxieme {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 3vh;
+        row-gap: 10vh;
+        justify-content: center;
+    }
+    
+    .blockDeuxieme1 {
+        width: 18.7rem;
+        height: 16rem;
+        background: white;
+        border-radius: 10px;
+        /* box-shadow: #594d4f -1px 1px 8px 0px; */
+    }
+    
+    .blockDeuxieme1:hover .nouveau {
+        display: block;
+        display: grid;
+        place-items: center;
+        transform: rotate(40deg);
+    }
+    
+    .contenue:hover .image {
+        transition: 1s;
+        transform: rotateY(180deg);
+        /* border: 1px solid silver; */
+    }
+    
+    .photoUn:hover {
+        transform: rotateY(350deg);
+        transition: 2s;
+        cursor: none;
+    }
+    
+    .contenue:hover {
+        transition: 1s;
+        transform: rotateY(180deg);
+        /* border: 1px solid silver; */
+    }
+    
+    .contenue:hover {
+        transform: scale( 1.1);
+        transition: 1s;
+    }
+    
+    .blockDeux {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        align-items: center;
+    }
+    
+    .nouveau {
+        background: black;
+        color: white;
+        width: 7rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        margin-left: 162px;
+        display: none;
+    }
+    .nouveau p{
+        color:white;
+    }
+    
+    .nouveauParent .image {
+        width: 5rem;
+        display: grid;
+        place-items: center;
+        height: 137px;
+    }
+    
+    .nouveauParent .sorat {
+        display: grid;
+        place-items: center;
+        height: 78px;
+        width: 17rem;
+        color: black;
+    }
+    
+    .nouveauParent .sorat p {
+        font-size: 0.8em;
+        width: 15rem;
+    }
+    
+    .nouveauParent .prix {
+        background: rgb(109, 223, 43);
+        color: white;
+        display: grid;
+        place-items: center;
+        width: 100px;
+        margin-top: -7px;
+        border-radius: 9px;
+        padding-top: 2px;
+        height: 29px;
+    }
+    
+    .sorat span {
+        margin-top: -28px;
+    }
+    
+    .nouveauParent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0.5rem;
+        cursor: pointer;
+        box-shadow: #594d4f -1px 1px 8px 0px;
+    }
+    
+    .nouveauParent:hover {
+        border: 2px solid #F7AB45;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+    }
+    
+    .contenuProduit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contenue {
+        display: grid;
+        place-items: center;
+    }
+    
+    .nombrePage {
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: center;
+        column-gap: 3rem;
+    }
+    
+    .nombre {
+        margin-top: 0.5em;
+    }
+    
+    .nombres {
+        background: rgb(44, 90, 158);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    
+    .nombres:hover {
+        border: 2px solid #F7AB45;
+    }
+    /* ------------------------------------ fin section N°3---------------------------- */
+    /* ------------------------------------  section N°4---------------------------- */
+    
+    .sousNumeroPage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background: rgba(177, 174, 174, 0.2);
+        margin-top: 2rem;
+        height: 3rem;
+    }
+    
+    .piedPage {
+        display: grid;
+        place-items: center;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    
+    .sousNumeroPage2 {
+        display: flex;
+        justify-content: center;
+        column-gap: 10rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+        background: rgba(179, 176, 176, 0.5);
+        color: rgba(180, 180, 180, 0.4);
+    }
+    
+    .piedPage1 {
+        column-gap: 0.1vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 3vh;
+        row-gap: 10vh;
+        justify-content: center;
+        margin-top: 1rem;
+        background: rgb(182, 182, 182);
+    }
+    
+    .logo {
+        width: 10rem;
+    }
+    /* ------------------------------------ fin section N°4---------------------------- */
